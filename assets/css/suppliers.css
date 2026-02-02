@@ -1,0 +1,26 @@
+/* Suppliers Module Styles */
+
+.suppliers-table {
+    background: white;
+    border-radius: 8px;
+}
+
+.supplier-filters {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.supplier-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+}
+
+.supplier-actions {
+    gap: 0.25rem;
+}

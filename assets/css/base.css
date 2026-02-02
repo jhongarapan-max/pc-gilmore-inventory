@@ -1,0 +1,103 @@
+/* Base Styles for PC Gilmore Inventory System */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Navbar */
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+
+/* Loading Spinner */
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+
+/* Success Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+
+/* Barcode Scanner Animation */
+
+@keyframes scan {
+    0% {
+        border-color: var(--primary-color);
+    }
+    50% {
+        border-color: var(--secondary-color);
+    }
+    100% {
+        border-color: var(--primary-color);
+    }
+}
+
+.scanning {
+    animation: scan 1s infinite;
+}
+
+
+/* Print styles */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    body {
+        background: white;
+    }
+    .card {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+}

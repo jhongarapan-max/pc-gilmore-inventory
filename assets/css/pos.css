@@ -1,0 +1,68 @@
+/* POS Module Styles */
+
+
+/* Scanner Input */
+
+.scanner-input {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+}
+
+.scanner-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.3rem rgba(118, 75, 162, 0.25);
+}
+
+
+/* Item Display */
+
+.item-card {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    background: white;
+}
+
+.item-info {
+    font-size: 1.1rem;
+}
+
+.stock-badge {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+
+
+/* POS Cart */
+
+.cart-table {
+    background: white;
+    border-radius: 10px;
+}
+
+.cart-total {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.pos-keypad button {
+    font-size: 1.5rem;
+    padding: 15px;
+    margin: 5px;
+    min-width: 60px;
+}
+
+@media (max-width: 768px) {
+    .cart-total {
+        font-size: 1.5rem;
+    }
+    .pos-keypad button {
+        font-size: 1.2rem;
+        padding: 10px;
+        min-width: 50px;
+    }
+}

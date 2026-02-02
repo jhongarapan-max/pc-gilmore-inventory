@@ -1,0 +1,488 @@
+/* Custom Styles for PC Gilmore Inventory System */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* Navbar */
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+
+/* Cards */
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* Tables */
+
+.table {
+    background: white;
+}
+
+.table thead th {
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* Buttons */
+
+.btn {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+
+/* Forms */
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+
+/* Scanner Input */
+
+.scanner-input {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+}
+
+.scanner-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.3rem rgba(118, 75, 162, 0.25);
+}
+
+
+/* Item Display */
+
+.item-card {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    background: white;
+}
+
+.item-info {
+    font-size: 1.1rem;
+}
+
+.stock-badge {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+
+
+/* POS Cart */
+
+.cart-table {
+    background: white;
+    border-radius: 10px;
+}
+
+.cart-total {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.pos-keypad button {
+    font-size: 1.5rem;
+    padding: 15px;
+    margin: 5px;
+    min-width: 60px;
+}
+
+
+/* Stats Cards */
+
+.stat-card {
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* Badges */
+
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+}
+
+
+/* Alerts */
+
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+
+/* Loading Spinner */
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+
+/* Modal */
+
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 2px solid #e9ecef;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .stat-card h2 {
+        font-size: 1.5rem;
+    }
+    .cart-total {
+        font-size: 1.5rem;
+    }
+    .pos-keypad button {
+        font-size: 1.2rem;
+        padding: 10px;
+        min-width: 50px;
+    }
+}
+
+
+/* Print styles */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    body {
+        background: white;
+    }
+    .card {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+}
+
+
+/* Barcode Scanner Animation */
+
+@keyframes scan {
+    0% {
+        border-color: var(--primary-color);
+    }
+    50% {
+        border-color: var(--secondary-color);
+    }
+    100% {
+        border-color: var(--primary-color);
+    }
+}
+
+.scanning {
+    animation: scan 1s infinite;
+}
+
+
+/* Low Stock Warning */
+
+.low-stock-row {
+    background-color: #fff3cd !important;
+}
+
+
+/* Out of Stock */
+
+.out-of-stock-row {
+    background-color: #f8d7da !important;
+}
+
+
+/* Success Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+
+/* Sidebar Navigation */
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #343a40, #495057);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.5s;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.sidebar .nav {
+    padding-top: 20px;
+    flex: 1;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #f8f9fa;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .closebtn {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: none;
+    background: none;
+    border: none;
+    color: #f8f9fa;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.sidebar .closebtn:hover {
+    color: #fff;
+}
+
+.sidebar .sidebar-brand {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.sidebar-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    padding: 20px;
+    background: linear-gradient(135deg, #343a40, #495057);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.sidebar .dropdown-menu .dropdown-item {
+    color: #f8f9fa;
+    padding: 8px 15px 8px 30px;
+}
+
+.sidebar .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+#main-content {
+    transition: margin-left 0.5s ease;
+    padding: 0;
+    margin-left: 250px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#openNav {
+    font-size: 1.5rem;
+    display: none;
+    border: none;
+    background: transparent;
+    padding: 0.5rem;
+    margin-left: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+#openNav:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#openNav:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-content {
+    padding: 1rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.top-navbar-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+body {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    #main-content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+    .sidebar {
+        width: 250px !important;
+        display: flex !important;
+    }
+    .sidebar .closebtn {
+        display: none !important;
+    }
+    #openNav {
+        display: none !important;
+    }
+    .sidebar-footer {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        display: none;
+    }
+    .sidebar.active {
+        width: 250px;
+        display: flex !important;
+    }
+    #main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .sidebar .closebtn {
+        display: block !important;
+    }
+    #openNav {
+        display: block !important;
+    }
+    .sidebar-footer {
+        width: 250px;
+    }
+}

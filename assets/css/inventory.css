@@ -1,0 +1,33 @@
+/* Inventory Module Styles */
+
+.inventory-table {
+    background: white;
+    border-radius: 8px;
+}
+
+.inventory-filters {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-actions {
+    gap: 0.5rem;
+}
+
+.stock-badge-low {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.stock-badge-out {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.stock-badge-ok {
+    background-color: #28a745;
+    color: #fff;
+}

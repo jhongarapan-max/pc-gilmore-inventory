@@ -1,0 +1,32 @@
+/* Scanner Module Styles */
+
+.scanner-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scanner-input {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+}
+
+.scanner-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.3rem rgba(118, 75, 162, 0.25);
+}
+
+.scanned-items {
+    margin-top: 2rem;
+}
+
+.scanned-item {
+    background: white;
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}

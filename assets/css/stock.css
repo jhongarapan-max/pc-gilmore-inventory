@@ -1,0 +1,91 @@
+/**
+ * Users Module Scripts
+ */
+
+// Filter users
+function filterUsers(searchTerm) {
+    const table = document.querySelector('.users-table tbody');
+    if (!table) return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+}
+searchInput.addEventListener('input', debouncedUserSearch);
+if (searchInput) {
+    const searchInput = document.querySelector('.user-search');
+    document.addEventListener('DOMContentLoaded', function() { // Initialize users page}        });            alert('An error occurred');            console.error('Error:', error);        .catch(error => {        })            location.reload();            alert('Password reset successfully');        .then(data => {        .then(response => response.text())        })            body: 'id=' + userId + '&action=reset_password&password=' + encodeURIComponent(newPassword)            },                'Content-Type': 'application/x-www-form-urlencoded',            headers: {            method: 'POST',
+                fetch('edit.php', {
+                            showLoading(document.querySelector(`[data-user-id="${userId}"] .reset-btn`));
+                            if (!newPassword) return;
+                            const newPassword = prompt(`Enter new password for ${userName}:`);
+
+                            function resetPassword(userId, userName) { // Reset user password}        });            alert('An error occurred');            console.error('Error:', error);        .catch(error => {        })            location.reload();        .then(data => {        .then(response => response.text())        })            body: 'id=' + userId            },                'Content-Type': 'application/x-www-form-urlencoded',            headers: {            method: 'POST',
+                                fetch('delete.php', {
+                                            showLoading(document.querySelector(`[data-user-id="${userId}"] .delete-btn`));
+                                            if (!confirmDelete(userName)) return;
+
+                                            function deleteUser(userId, userName) { // Delete user}, 300);    filterUsers(e.target.value);const debouncedUserSearch = debounce(function(e) {// Add debounced search}    });        row.style.display = text.includes(searchTerm) ? '' : 'none';        const text = row.textContent.toLowerCase();
+                                                rows.forEach(row => { searchTerm = searchTerm.toLowerCase(); const rows = table.querySelectorAll('tr');
